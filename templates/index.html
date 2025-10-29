@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wishlist Manager</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body style="background-image: url('https://i.redd.it/akc85sn39q5f1.png');">
+<div class="container">
+    <h1>Manage Wishlist</h1>
+    {% if message %}
+        <p class="message {% if success %}success{% else %}error{% endif %}">{{ message }}</p>
+    {% endif %}
+    <form method="POST">
+        <input type="text" name="uid" placeholder="Enter UID" required>
+        <input type="password" name="password" placeholder="Enter Password" required>
+        <input type="text" name="itemid" placeholder="Enter Item ID (numbers only)" required pattern="[0-9]+">
+
+        <select name="region" required class="region-select">
+            <option value="">Select Region</option>
+            {% for region in regions %}
+                <option value="{{ region }}">{{ region }}</option>
+            {% endfor %}
+        </select>
+
+        <div class="buttons">
+            <button type="submit" name="action" value="add">Add</button>
+            <button type="submit" name="action" value="remove">Remove</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
