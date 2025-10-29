@@ -1,0 +1,103 @@
+body {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.75);
+    border: 2px solid #ff0000;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 90%;
+    max-width: 380px;
+    box-shadow: 0 0 25px #ff0000;
+}
+
+h1 {
+    color: #ff4d4d;
+    text-shadow: 0 0 10px #ff0000;
+    font-size: 1.8rem;
+}
+
+input, select, button {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+input, select {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ff4d4d;
+    font-weight: 500;
+}
+
+/* Dropdown styling */
+.region-select {
+    background-color: #000;
+    color: #ff0000;
+    border: 1px solid #ff0000;
+}
+
+.region-select option {
+    background: #000;
+    color: #ff0000;
+}
+
+button {
+    cursor: pointer;
+    background: #ff0000;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #ff0000;
+}
+
+button:hover {
+    background: #ff4d4d;
+    box-shadow: 0 0 20px #ff4d4d;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.message {
+    margin: 10px 0;
+    font-size: 0.95rem;
+    text-shadow: 0 0 10px #000;
+}
+
+.message.error {
+    color: #ff8080;
+}
+
+.message.success {
+    color: #80ff80;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
